@@ -41,17 +41,21 @@
 
 }
 .mywork-showmore{
+
     display: flex;
     gap: 15px;
     border-radius: 50px;
     border: 2px solid white;
-    padding:30px 60px;
+    padding: 30px 60px;
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 80px;
     transition: 0.6s;
     cursor: pointer;
+    text-decoration: none; /* removes underline */
+    color: white;           /* ensures text stays white */
 }
+
 .mywork-showmore:hover{
     gap: 30px;
     transition: 0.6s;
@@ -86,4 +90,62 @@
         margin: 50px auto;
         cursor: pointer;
     }
+}
+
+.mywork-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 100%;
+}
+
+.mywork-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.mywork-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.mywork-item h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  color: #fff;
+}
+
+.mywork-desc {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.mywork-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.mywork-btn {
+  padding: 8px 18px;
+  background-color: #ff00ff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.mywork-btn:hover {
+  background-color: #cc00cc;
 }

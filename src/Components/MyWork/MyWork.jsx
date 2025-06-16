@@ -11,14 +11,29 @@ const MyWork = () => {
         <img src={themePattern} alt=''/>
     </div>
     <div className="mywork-container">
-        {mywork_data.map((work,index)=>{
-            return <img key ={index} src={work.w_img} alt=''/>
-        })}
+        {mywork_data.map((work, index) => (
+    <div key={index} className="mywork-item">
+      <img src={work.w_img} alt={work.w_name} />
+       <h3>{work.w_name}</h3>
+        <p className="mywork-desc">{work.w_desc}</p>
+      <div className="mywork-buttons">
+        <a href={work.live_link} target="_blank" rel="noopener noreferrer" className="mywork-btn">Live App</a>
+        <a href={work.w_link} target="_blank" rel="noopener noreferrer" className="mywork-btn">GitHub</a>
+      </div>
     </div>
-    <div className="mywork-showmore">
+  ))}
+    </div>
+  
+        <a 
+  href="https://github.com/SanthoshKumar211299" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="mywork-showmore"
+>
         <p>Show More</p>
         <img src={arrow_icon} alt=''/>
-    </div>
+    </a>
+    
    </div>
   )
 }
